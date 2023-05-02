@@ -16,7 +16,7 @@ Nativify TTS API is a FastAPI application that provides a simple interface for t
 - **Method**: `GET`
 - **Parameters**:
   - `text`: The text to be converted to speech.
-  - `lang`: The language code for the text (e.g., `en`, `fr`, `es`). Check the [supported languages](https://cloud.google.com/translate/docs/languages){:target="_blank"} for more information.
+  - `lang`: The language code for the text (e.g., `en`, `fr`, `es`). Check the [supported languages](https://cloud.google.com/translate/docs/languages) for more information.
 - **Description**: Converts the input text to speech in the specified language and returns an MP3 audio file.
 
 ### 3. Supported Languages
