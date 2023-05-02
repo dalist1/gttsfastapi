@@ -16,7 +16,7 @@ Nativify TTS API is a FastAPI application that provides a simple interface for t
 - **Method**: `GET`
 - **Parameters**:
   - `text`: The text to be converted to speech.
-  - `lang`: The language code for the text (e.g., `en`, `fr`, `es`). Check the [supported languages](#supported-languages) for more information.
+  - `lang`: The language code for the text (e.g., `en`, `fr`, `es`). Check the [supported languages](https://cloud.google.com/translate/docs/languages) for more information.
 - **Description**: Converts the input text to speech in the specified language and returns an MP3 audio file.
 
 ### 3. Supported Languages
@@ -34,19 +34,19 @@ The API handles errors raised by the gTTS library and returns a JSON response wi
 1. Get the list of supported languages:
 
 ```
-GET https://api.example.com/langs
+GET https://gttsfastapi.vercel.app/langs
 ```
 
 2. Convert text to speech in English:
 
 ```
-GET https://api.example.com/tts/en?text=Hello%20world
+GET https://gttsfastapi.vercel.app/tts/en?text=Hello%20world
 ```
 
 3. Convert text to speech in French:
 
 ```
-GET https://api.example.com/tts/fr?text=Bonjour%20le%20monde
+GET https://gttsfastapi.vercel.app/tts/fr?text=Bonjour%20le%20monde
 ```
 
 ## Dependencies
