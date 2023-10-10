@@ -15,7 +15,7 @@ async def root():
     return Response(content=content, media_type="text/plain")
 
 @app.get("/tts/{lang}")
-def tts(text: str, lang: str = Path(..., description="Language code")):
+def tts(text: str, lang: str = Path(..., description="Language code"), tld='us', slow=False):
     if lang not in tts_langs:
         raise HTTPException(
             detail=f"{lang} is not a valid language code.",
