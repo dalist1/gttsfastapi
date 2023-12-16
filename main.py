@@ -46,3 +46,15 @@ async def gtts_exception_handler(request: Request, exc: gTTSError):
 @app.get("/v1/langs")
 async def get_langs():
     return tts_langs
+
+# CORS
+
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+   CORSMiddleware,
+   allow_origins=["*"],
+   allow_credentials=True,
+   allow_methods=["*"],
+   allow_headers=["*"],
+)
